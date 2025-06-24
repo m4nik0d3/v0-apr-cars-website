@@ -69,7 +69,7 @@ export function FeaturedCars() {
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mt-8">
       {featuredCars.map((car) => (
         <Card key={car.id} className="overflow-hidden">
-          <div className="relative h-[180px] sm:h-[200px]">
+          <div className="relative h-[200px] sm:h-[220px] md:h-[240px]">
             <Image
               src={car.image || "/placeholder.svg"}
               alt={`${car.brand} ${car.model}`}
@@ -78,60 +78,73 @@ export function FeaturedCars() {
               className="object-cover"
             />
           </div>
-          <CardContent className="p-3 sm:p-4">
-            <div className="flex justify-between items-start">
-              <div>
-                <h3 className="text-base sm:text-xl font-bold">
-                  {car.brand} {car.model}
-                </h3>
-                <p className="text-gray-500 text-sm">{car.year}</p>
-                {car.type && <p className="text-red-600 text-xs font-medium">{car.type}</p>}
+          <CardContent className="p-4 sm:p-5">
+            <div className="space-y-3">
+              <div className="flex justify-between items-start">
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-base sm:text-lg md:text-xl font-bold truncate">
+                    {car.brand} {car.model}
+                  </h3>
+                  <p className="text-gray-500 text-sm">{car.year}</p>
+                  {car.type && <p className="text-red-600 text-xs font-medium mt-1">{car.type}</p>}
+                </div>
+                <Badge
+                  variant="outline"
+                  className="bg-red-600 text-white border-none text-sm font-bold px-3 py-1 ml-2 flex-shrink-0"
+                >
+                  {car.price.toLocaleString("es-ES")} €
+                </Badge>
               </div>
-              <Badge variant="outline" className="bg-red-600 text-white border-none text-xs sm:text-sm">
-                {car.price.toLocaleString("es-ES")} €
-              </Badge>
-            </div>
-            <div className="grid grid-cols-2 gap-1 sm:gap-2 mt-3 sm:mt-4 text-xs sm:text-sm">
-              {car.km && (
-                <div className="flex items-center gap-1 sm:gap-2">
-                  <span className="font-medium">Kilometraje:</span> {car.km.toLocaleString("es-ES")} km
+
+              <div className="space-y-2">
+                {car.km && (
+                  <div className="flex justify-between text-sm">
+                    <span className="font-medium text-gray-600">Kilometraje:</span>
+                    <span>{car.km.toLocaleString("es-ES")} km</span>
+                  </div>
+                )}
+                {car.hours && (
+                  <div className="flex justify-between text-sm">
+                    <span className="font-medium text-gray-600">Horas:</span>
+                    <span>{car.hours}h</span>
+                  </div>
+                )}
+                <div className="flex justify-between text-sm">
+                  <span className="font-medium text-gray-600">Combustible:</span>
+                  <span>{car.fuel}</span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span className="font-medium text-gray-600">Transmisión:</span>
+                  <span>{car.transmission}</span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span className="font-medium text-gray-600">
+                    {car.type === "Motocicleta" ? "Cilindrada:" : "Potencia:"}
+                  </span>
+                  <span>{car.type === "Motocicleta" ? `${car.power} cc` : `${car.power} CV`}</span>
+                </div>
+              </div>
+
+              {car.type === "Motocicleta" && (
+                <div className="mt-3 p-3 bg-green-50 rounded-lg border border-green-200">
+                  {car.brand === "Honda" && (
+                    <div className="space-y-1">
+                      <p className="text-xs text-green-700 font-medium">✓ Válida para carnet A2</p>
+                      <p className="text-xs text-green-700">✓ ITV pasada hasta 2026</p>
+                    </div>
+                  )}
+                  {car.brand === "Husqvarna" && (
+                    <div className="space-y-1">
+                      <p className="text-xs text-green-700 font-medium">✓ Solo 180 horas de uso</p>
+                      <p className="text-xs text-green-700">✓ ITV hasta 2026</p>
+                      <p className="text-xs text-green-700">✓ Faro LED y protectores</p>
+                    </div>
+                  )}
                 </div>
               )}
-              {car.hours && (
-                <div className="flex items-center gap-1 sm:gap-2">
-                  <span className="font-medium">Horas:</span> {car.hours}h
-                </div>
-              )}
-              <div className="flex items-center gap-1 sm:gap-2">
-                <span className="font-medium">Combustible:</span> {car.fuel}
-              </div>
-              <div className="flex items-center gap-1 sm:gap-2">
-                <span className="font-medium">Transmisión:</span> {car.transmission}
-              </div>
-              <div className="flex items-center gap-1 sm:gap-2">
-                <span className="font-medium">{car.type === "Motocicleta" ? "Cilindrada:" : "Potencia:"}</span>
-                {car.type === "Motocicleta" ? `${car.power} cc` : `${car.power} CV`}
-              </div>
             </div>
-            {car.type === "Motocicleta" && (
-              <div className="mt-2 p-2 bg-green-50 rounded-lg">
-                {car.brand === "Honda" && (
-                  <>
-                    <p className="text-xs text-green-700 font-medium">✓ Válida para carnet A2</p>
-                    <p className="text-xs text-green-700">✓ ITV pasada hasta 2026</p>
-                  </>
-                )}
-                {car.brand === "Husqvarna" && (
-                  <>
-                    <p className="text-xs text-green-700 font-medium">✓ Solo 180 horas de uso</p>
-                    <p className="text-xs text-green-700">✓ ITV hasta 2026</p>
-                    <p className="text-xs text-green-700">✓ Faro LED y protectores</p>
-                  </>
-                )}
-              </div>
-            )}
           </CardContent>
-          <CardFooter className="p-3 sm:p-4 pt-0 flex flex-col sm:flex-row gap-2 sm:justify-between">
+          <CardFooter className="p-4 sm:p-5 pt-0 flex flex-col sm:flex-row gap-2 sm:justify-between">
             {car.type !== "Motocicleta" ? (
               <Link href={`/inventario/${car.id}`} passHref className="w-full sm:w-auto">
                 <Button variant="outline" className="w-full sm:w-auto text-sm">
