@@ -4,8 +4,8 @@ import { ChevronRight, Phone, Mail } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { CarouselHero } from "@/components/carousel-hero"
 import { FeaturedCars } from "@/components/featured-cars"
+import { SoldCars } from "@/components/sold-cars"
 import { BrandLogos } from "@/components/brand-logos"
-import { ComparisonChart } from "@/components/comparison-chart"
 
 export default function Home() {
   return (
@@ -40,7 +40,7 @@ export default function Home() {
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tighter">Vehículos destacados</h2>
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tighter">Vehículos en stock</h2>
               <p className="max-w-[900px] text-gray-500 text-sm md:text-base lg:text-lg">
                 Descubre nuestra selección de vehículos premium con las mejores condiciones.
               </p>
@@ -50,59 +50,54 @@ export default function Home() {
         </div>
       </section>
 
+      <SoldCars />
+
       <BrandLogos />
 
       <section className="w-full py-8 md:py-12 bg-white">
         <div className="container px-4 md:px-6">
-          <div className="grid gap-8 lg:grid-cols-2 lg:gap-16 items-center">
-            <div className="flex flex-col justify-center space-y-4">
-              <div className="space-y-2">
-                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tighter">¿Por qué elegirnos?</h2>
-                <p className="max-w-[600px] text-gray-500 text-sm md:text-base lg:text-lg">
-                  En APR Cars nos comprometemos a ofrecerte el mejor servicio y las mejores condiciones.
-                </p>
-              </div>
-              <ul className="grid gap-4 md:gap-6">
-                <li className="flex items-start gap-3 md:gap-4">
-                  <div className="flex h-8 w-8 md:h-10 md:w-10 shrink-0 items-center justify-center rounded-full bg-red-600 text-white text-sm md:text-base">
-                    1
-                  </div>
-                  <div className="grid gap-1">
-                    <h3 className="text-lg md:text-xl font-bold">Amplia selección</h3>
-                    <p className="text-gray-500 text-sm md:text-base">
-                      Disponemos de una gran variedad de vehículos para todos los gustos y necesidades.
-                    </p>
-                  </div>
-                </li>
-                <li className="flex items-start gap-3 md:gap-4">
-                  <div className="flex h-8 w-8 md:h-10 md:w-10 shrink-0 items-center justify-center rounded-full bg-red-600 text-white text-sm md:text-base">
-                    2
-                  </div>
-                  <div className="grid gap-1">
-                    <h3 className="text-lg md:text-xl font-bold">Garantía de calidad</h3>
-                    <p className="text-gray-500 text-sm md:text-base">
-                      Todos nuestros vehículos pasan por exhaustivos controles de calidad.
-                    </p>
-                  </div>
-                </li>
-                <li className="flex items-start gap-3 md:gap-4">
-                  <div className="flex h-8 w-8 md:h-10 md:w-10 shrink-0 items-center justify-center rounded-full bg-red-600 text-white text-sm md:text-base">
-                    3
-                  </div>
-                  <div className="grid gap-1">
-                    <h3 className="text-lg md:text-xl font-bold">Financiación a medida</h3>
-                    <p className="text-gray-500 text-sm md:text-base">
-                      Te ofrecemos las mejores opciones de financiación adaptadas a tus necesidades.
-                    </p>
-                  </div>
-                </li>
-              </ul>
+          <div className="flex flex-col items-center justify-center space-y-4 text-center">
+            <div className="space-y-2">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tighter">¿Por qué elegirnos?</h2>
+              <p className="max-w-[900px] text-gray-500 text-sm md:text-base lg:text-lg">
+                En APR Cars nos comprometemos a ofrecerte el mejor servicio y las mejores condiciones.
+              </p>
             </div>
-            <div className="flex items-center justify-center w-full">
-              <div className="w-full max-w-[650px]">
-                <ComparisonChart />
-              </div>
-            </div>
+            <ul className="grid gap-4 md:gap-6 max-w-2xl">
+              <li className="flex items-start gap-3 md:gap-4">
+                <div className="flex h-8 w-8 md:h-10 md:w-10 shrink-0 items-center justify-center rounded-full bg-red-600 text-white text-sm md:text-base">
+                  1
+                </div>
+                <div className="grid gap-1">
+                  <h3 className="text-lg md:text-xl font-bold">Amplia selección</h3>
+                  <p className="text-gray-500 text-sm md:text-base">
+                    Disponemos de una gran variedad de vehículos para todos los gustos y necesidades.
+                  </p>
+                </div>
+              </li>
+              <li className="flex items-start gap-3 md:gap-4">
+                <div className="flex h-8 w-8 md:h-10 md:w-10 shrink-0 items-center justify-center rounded-full bg-red-600 text-white text-sm md:text-base">
+                  2
+                </div>
+                <div className="grid gap-1">
+                  <h3 className="text-lg md:text-xl font-bold">Garantía de calidad</h3>
+                  <p className="text-gray-500 text-sm md:text-base">
+                    Todos nuestros vehículos pasan por exhaustivos controles de calidad.
+                  </p>
+                </div>
+              </li>
+              <li className="flex items-start gap-3 md:gap-4">
+                <div className="flex h-8 w-8 md:h-10 md:w-10 shrink-0 items-center justify-center rounded-full bg-red-600 text-white text-sm md:text-base">
+                  3
+                </div>
+                <div className="grid gap-1">
+                  <h3 className="text-lg md:text-xl font-bold">Atención personalizada</h3>
+                  <p className="text-gray-500 text-sm md:text-base">
+                    Te asesoramos de forma individual para encontrar el vehículo perfecto para ti.
+                  </p>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
       </section>

@@ -10,24 +10,28 @@ import { useMobile } from "@/hooks/use-mobile"
 
 const carouselItems = [
   {
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Mercedes-C-Class-2015-C01-OC7w4oOpGQCunWZyFRZK7UV8jDaOD8.webp",
-    alt: "Mercedes-Benz Clase C",
-    title: "Mercedes-Benz Clase C",
-    description: "Elegancia y rendimiento en un solo vehículo",
+    image: "/cars/hero-gti.jpg",
+    alt: "Volkswagen Golf GTI",
+    title: "Volkswagen Golf GTI",
+    description: "Deportividad pura con el icónico GTI",
   },
   {
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/14817089135002.jpg-YslLnPQ23dW7K5x57zYzWNp4XpeFuZ.jpeg",
-    alt: "BMW Serie 5",
-    title: "BMW Serie 5",
-    description: "La combinación perfecta de deportividad y confort",
+    image: "/cars/hero-bmw-serie3.jpg",
+    alt: "BMW Serie 3",
+    title: "BMW Serie 3",
+    description: "El placer de conducir hecho realidad",
   },
   {
-    image: "/cars/audi-a4-new.jpg",
-    alt: "Audi A4",
-    title: "Audi A4",
-    description: "Tecnología avanzada y diseño sofisticado",
+    image: "/cars/hero-troc.jpg",
+    alt: "Volkswagen T-Roc",
+    title: "Volkswagen T-Roc",
+    description: "SUV compacto con estilo urbano",
+  },
+  {
+    image: "/cars/hero-a3-white.jpg",
+    alt: "Audi A3",
+    title: "Audi A3",
+    description: "Elegancia y tecnología en cada detalle",
   },
 ]
 
