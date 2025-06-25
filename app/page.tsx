@@ -10,6 +10,20 @@ import { BrandLogos } from "@/components/brand-logos"
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
+      <section className="w-full py-8 md:py-12 bg-white">
+        <div className="container px-4 md:px-6">
+          <div className="flex flex-col items-center justify-center space-y-4 text-center">
+            <div className="space-y-2">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tighter">Vehículos en stock</h2>
+              <p className="max-w-[900px] text-gray-500 text-sm md:text-base lg:text-lg">
+                Descubre nuestra selección de vehículos premium con las mejores condiciones.
+              </p>
+            </div>
+          </div>
+          <FeaturedCars />
+        </div>
+      </section>
+
       <section className="w-full py-8 md:py-12 lg:py-16 bg-gradient-to-b from-gray-900 to-gray-800 text-white">
         <div className="container px-4 md:px-6">
           <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
@@ -31,22 +45,11 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <CarouselHero />
-          </div>
-        </div>
-      </section>
-
-      <section className="w-full py-8 md:py-12 bg-white">
-        <div className="container px-4 md:px-6">
-          <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <div className="space-y-2">
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tighter">Vehículos en stock</h2>
-              <p className="max-w-[900px] text-gray-500 text-sm md:text-base lg:text-lg">
-                Descubre nuestra selección de vehículos premium con las mejores condiciones.
-              </p>
+            <div className="space-y-4">
+              <h3 className="text-xl md:text-2xl font-bold text-center">Galería de vehículos</h3>
+              <CarouselHero />
             </div>
           </div>
-          <FeaturedCars />
         </div>
       </section>
 
@@ -132,12 +135,12 @@ export default function Home() {
               <Mail className="h-8 w-8 md:h-10 md:w-10 text-red-500" />
               <h3 className="text-lg md:text-xl font-bold">Escríbenos</h3>
               <a
-                href="https://mail.google.com/mail/?view=cm&fs=1&to=pablo.sanchez@iesdecurtis.gal&su=Contacto%20desde%20APR%20Cars"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=andresvazquezdelrio@gmail.com&su=Contacto%20desde%20APR%20Cars"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-white transition-colors flex items-center text-sm md:text-base"
               >
-                <span className="break-all">pablo.sanchez@iesdecurtis.gal</span>
+                <span className="break-all">andresvazquezdelrio@gmail.com</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"

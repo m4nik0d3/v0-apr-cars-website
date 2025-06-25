@@ -33,6 +33,54 @@ const carouselItems = [
     title: "Audi A3",
     description: "Elegancia y tecnología en cada detalle",
   },
+  {
+    image: "/cars/gallery/audi-a3-grey.jpeg",
+    alt: "Audi A3 Sportback",
+    title: "Audi A3 Sportback",
+    description: "Diseño dinámico y prestaciones excepcionales",
+  },
+  {
+    image: "/cars/gallery/audi-a5-grey.jpeg",
+    alt: "Audi A5 Coupé",
+    title: "Audi A5 Coupé",
+    description: "Elegancia deportiva en cada línea",
+  },
+  {
+    image: "/cars/gallery/vw-golf-gti-white.jpeg",
+    alt: "Volkswagen Golf GTI",
+    title: "Volkswagen Golf GTI",
+    description: "La leyenda deportiva continúa",
+  },
+  {
+    image: "/cars/gallery/vw-golf-rline-grey.jpeg",
+    alt: "Volkswagen Golf R-Line",
+    title: "Volkswagen Golf R-Line",
+    description: "Deportividad y sofisticación",
+  },
+  {
+    image: "/cars/gallery/vw-golf-gtd-white.jpeg",
+    alt: "Volkswagen Golf GTD",
+    title: "Volkswagen Golf GTD",
+    description: "Potencia diésel con carácter deportivo",
+  },
+  {
+    image: "/cars/gallery/audi-a1-white.jpeg",
+    alt: "Audi A1",
+    title: "Audi A1",
+    description: "Compacto premium con personalidad",
+  },
+  {
+    image: "/cars/gallery/vw-caddy-white.jpeg",
+    alt: "Volkswagen Caddy",
+    title: "Volkswagen Caddy",
+    description: "Versatilidad y funcionalidad",
+  },
+  {
+    image: "/cars/gallery/vw-caddy-red.jpeg",
+    alt: "Volkswagen Caddy",
+    title: "Volkswagen Caddy",
+    description: "El compañero perfecto para el trabajo",
+  },
 ]
 
 export function CarouselHero() {
