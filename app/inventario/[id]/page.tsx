@@ -345,7 +345,7 @@ export default function CarPage({ params }: CarPageProps) {
                 </div>
                 <div className="flex items-center gap-2">
                   <Mail className="h-5 w-5 text-red-600" />
-                  <span>pablo.sanchez@iesdecurtis.gal</span>
+                  <span>andresvazquezdelrio@gmail.com</span>
                 </div>
                 <Link href="/contacto" passHref>
                   <Button className="w-full bg-red-600 hover:bg-red-700">Formulario de contacto</Button>

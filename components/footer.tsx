@@ -86,12 +86,12 @@ export function Footer() {
               <li className="flex items-start gap-2">
                 <Mail className="h-5 w-5 text-red-500 mt-0.5 flex-shrink-0" />
                 <a
-                  href="https://mail.google.com/mail/?view=cm&fs=1&to=pablo.sanchez@iesdecurtis.gal&su=Contacto%20desde%20APR%20Cars"
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=andresvazquezdelrio@gmail.com&su=Contacto%20desde%20APR%20Cars"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-red-400 transition-colors break-all text-sm md:text-base"
                 >
-                  pablo.sanchez@iesdecurtis.gal
+                  andresvazquezdelrio@gmail.com
                 </a>
               </li>
             </ul>
