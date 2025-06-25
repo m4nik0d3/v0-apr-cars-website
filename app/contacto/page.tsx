@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="container px-4 md:px:6 py-8 md:py-12">
+    <div className="container px-4 md:px-6 py-8 md:py-12">
       <div className="flex flex-col items-center text-center space-y-4 mb-8">
         <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold tracking-tighter">Contacta con nosotros</h1>
         <p className="max-w-[700px] text-gray-500 text-sm md:text-base lg:text-xl">
@@ -54,7 +54,7 @@ export default function ContactPage() {
               <div className="flex h-10 w-10 md:h-12 md:w-12 shrink-0 items-center justify-center rounded-full bg-red-600 text-white">
                 <Mail className="h-5 w-5 md:h-6 md:w-6" />
               </div>
-              <div className="w-full">
+              <div className="flex-1 min-w-0">
                 <h3 className="text-lg md:text-xl font-bold">Email</h3>
                 <p className="text-gray-500 mb-2 text-sm md:text-base">
                   Escríbenos y te responderemos lo antes posible
@@ -63,9 +63,9 @@ export default function ContactPage() {
                   href="https://mail.google.com/mail/?view=cm&fs=1&to=andresvazquezdelrio@gmail.com&su=Contacto%20desde%20APR%20Cars"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm md:text-base lg:text-lg font-medium hover:text-red-600 transition-colors flex items-center break-all"
+                  className="text-sm md:text-base font-medium hover:text-red-600 transition-colors flex items-center break-words"
                 >
-                  <span className="truncate">andresvazquezdelrio@gmail.com</span>
+                  <span className="break-all">andresvazquezdelrio@gmail.com</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"
