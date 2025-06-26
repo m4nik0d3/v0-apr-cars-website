@@ -144,8 +144,8 @@ export default function CarPage({ params }: CarPageProps) {
         <div className="text-center">
           <h1 className="text-3xl font-bold mb-4">Vehículo no encontrado</h1>
           <p className="text-gray-500 mb-6">El vehículo que buscas no está disponible.</p>
-          <Link href="/inventario" passHref>
-            <Button className="bg-red-600 hover:bg-red-700">Volver al inventario</Button>
+          <Link href="/" passHref>
+            <Button className="bg-red-600 hover:bg-red-700">Volver al Inicio</Button>
           </Link>
         </div>
       </div>
@@ -159,12 +159,9 @@ export default function CarPage({ params }: CarPageProps) {
       <div className="flex flex-col space-y-8">
         <div className="flex flex-col md:flex-row justify-between items-start gap-4">
           <div>
-            <Link
-              href="/inventario"
-              className="inline-flex items-center text-sm text-gray-500 hover:text-gray-900 mb-2"
-            >
+            <Link href="/" className="inline-flex items-center text-sm text-gray-500 hover:text-gray-900 mb-2">
               <ChevronLeft className="mr-1 h-4 w-4" />
-              Volver al inventario
+              Volver al Inicio
             </Link>
             <h1 className="text-3xl font-bold">
               {car.brand} {car.model} {car.version}
