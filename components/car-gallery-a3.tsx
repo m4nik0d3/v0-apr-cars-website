@@ -8,48 +8,48 @@ import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog"
 
 const carImages = [
   {
-    src: "/cars/audi-q2-main.webp",
-    alt: "Audi Q2 Black Line - Vista frontal lateral principal",
+    src: "/cars/audi-a3-main.webp",
+    alt: "Audi A3 Sportback - Vista frontal lateral principal",
   },
   {
-    src: "/cars/audi-q2-1.webp",
-    alt: "Audi Q2 Black Line - Vista frontal",
+    src: "/cars/audi-a3-front.webp",
+    alt: "Audi A3 Sportback - Vista frontal",
   },
   {
-    src: "/cars/audi-q2-5.webp",
-    alt: "Audi Q2 Black Line - Vista lateral completa",
+    src: "/cars/audi-a3-side.webp",
+    alt: "Audi A3 Sportback - Vista lateral completa",
   },
   {
-    src: "/cars/audi-q2-3.webp",
-    alt: "Audi Q2 Black Line - Vista trasera",
+    src: "/cars/audi-a3-rear.webp",
+    alt: "Audi A3 Sportback - Vista trasera",
   },
   {
-    src: "/cars/audi-q2-4.webp",
-    alt: "Audi Q2 Black Line - Vista trasera lateral",
+    src: "/cars/audi-a3-rear-side.webp",
+    alt: "Audi A3 Sportback - Vista trasera lateral",
   },
   {
-    src: "/cars/audi-q2-interior.webp",
-    alt: "Audi Q2 Black Line - Interior y salpicadero",
+    src: "/cars/audi-a3-interior.webp",
+    alt: "Audi A3 Sportback - Interior y salpicadero",
   },
   {
-    src: "/cars/audi-q2-dashboard.webp",
-    alt: "Audi Q2 Black Line - Virtual Cockpit",
+    src: "/cars/audi-a3-dashboard.webp",
+    alt: "Audi A3 Sportback - Cuadro de instrumentos",
   },
   {
-    src: "/cars/audi-q2-navigation.webp",
-    alt: "Audi Q2 Black Line - Navegador GPS",
+    src: "/cars/audi-a3-trunk.webp",
+    alt: "Audi A3 Sportback - Maletero",
   },
   {
-    src: "/cars/audi-q2-camera.webp",
-    alt: "Audi Q2 Black Line - Cámara trasera y sensores",
+    src: "/cars/audi-a3-front-seats.webp",
+    alt: "Audi A3 Sportback - Asientos delanteros",
   },
   {
-    src: "/cars/audi-q2-seats.webp",
-    alt: "Audi Q2 Black Line - Asientos delanteros",
+    src: "/cars/audi-a3-rear-seats.webp",
+    alt: "Audi A3 Sportback - Asientos traseros",
   },
 ]
 
-export function CarGallery() {
+export function CarGalleryA3() {
   const [mainImage, setMainImage] = useState(0)
   const [fullscreenImage, setFullscreenImage] = useState(0)
   const [isDialogOpen, setIsDialogOpen] = useState(false)

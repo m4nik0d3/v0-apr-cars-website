@@ -49,7 +49,7 @@ const carImages = [
   },
 ]
 
-export function CarGallery() {
+export function CarGalleryQ2() {
   const [mainImage, setMainImage] = useState(0)
   const [fullscreenImage, setFullscreenImage] = useState(0)
   const [isDialogOpen, setIsDialogOpen] = useState(false)

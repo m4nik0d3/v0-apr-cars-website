@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
-import { Award, Users, Clock, ThumbsUp } from "lucide-react"
+import { Award, Users, Clock, ThumbsUp, Heart } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -40,19 +40,22 @@ export default function AboutPage() {
         <div className="space-y-4">
           <h2 className="text-2xl md:text-3xl font-bold">Nuestra historia</h2>
           <p className="text-gray-500 text-sm md:text-base">
-            APR Cars nació en 2025 de la mano de Andrés Vázquez, un apasionado del mundo del automóvil con varios años
-            de experiencia en el sector. Lo que comenzó como un pequeño negocio con apenas 5 vehículos, se está
-            convirtirndo en un sitio web emergente para obtener tu coche ideal según las premisas que prefieras.
+            APR Cars nace en 2022 de la mano de Andrés Vázquez, un apasionado del mundo del motor con una sólida
+            trayectoria en el sector.
           </p>
           <p className="text-gray-500 text-sm md:text-base">
-            A lo largo de estos años, hemos crecido manteniendo siempre nuestra filosofía inicial: ofrecer vehículos de
-            calidad con las mejores condiciones y un servicio personalizado a cada cliente. Nuestra pasión por los
-            coches y nuestro compromiso con la satisfacción del cliente nos han permitido crecer y consolidarnos en el
-            mercado.
+            Lo que empezó como un pequeño proyecto personal ha ido creciendo hasta convertirse en una plataforma
+            emergente para quienes buscan su coche ideal, con confianza y a medida.
           </p>
           <p className="text-gray-500 text-sm md:text-base">
-            Hoy, APR Cars es sinónimo de confianza, calidad y servicio. Seguimos trabajando cada día para mejorar y
-            ofrecer a nuestros clientes la mejor experiencia posible en la compra de su vehículo.
+            Desde el primer día, hemos mantenido intacta nuestra filosofía: ofrecer vehículos de calidad, con las
+            mejores condiciones y un trato cercano y personalizado. Nuestra pasión por los coches y nuestro compromiso
+            con la satisfacción del cliente nos han permitido avanzar con paso firme y consolidarnos como una opción de
+            confianza.
+          </p>
+          <p className="text-gray-500 text-sm md:text-base">
+            Hoy, APR Cars es sinónimo de calidad, compromiso y cercanía, y seguimos trabajando con ilusión para
+            ofrecerte siempre la mejor experiencia en la compra de tu vehículo.
           </p>
         </div>
       </div>
@@ -62,23 +65,11 @@ export default function AboutPage() {
       <div className="text-center mb-8 md:mb-12">
         <h2 className="text-2xl md:text-3xl font-bold mb-3 md:mb-4">Nuestros valores</h2>
         <p className="max-w-[700px] mx-auto text-gray-500 text-sm md:text-base lg:text-lg">
-          En APR Cars nos guiamos por unos valores fundamentales que definen nuestra forma de trabajar y relacionarnos
-          con nuestros clientes.
+          En APR Cars nos guiamos por principios que marcan cada paso que damos:
         </p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-8 md:mb-12">
-        <Card>
-          <CardContent className="p-4 md:p-6 flex flex-col items-center text-center">
-            <div className="h-10 w-10 md:h-12 md:w-12 rounded-full bg-red-100 flex items-center justify-center mb-3 md:mb-4">
-              <Award className="h-5 w-5 md:h-6 md:w-6 text-red-600" />
-            </div>
-            <h3 className="text-lg md:text-xl font-bold mb-2">Calidad</h3>
-            <p className="text-gray-500 text-sm md:text-base">
-              Seleccionamos cuidadosamente cada vehículo para garantizar su calidad y buen estado.
-            </p>
-          </CardContent>
-        </Card>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-6 mb-8 md:mb-12">
         <Card>
           <CardContent className="p-4 md:p-6 flex flex-col items-center text-center">
             <div className="h-10 w-10 md:h-12 md:w-12 rounded-full bg-red-100 flex items-center justify-center mb-3 md:mb-4">
@@ -86,7 +77,29 @@ export default function AboutPage() {
             </div>
             <h3 className="text-lg md:text-xl font-bold mb-2">Confianza</h3>
             <p className="text-gray-500 text-sm md:text-base">
-              Construimos relaciones de confianza con nuestros clientes basadas en la transparencia y la honestidad.
+              Transparencia en cada operación y vehículos revisados y garantizados.
+            </p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardContent className="p-4 md:p-6 flex flex-col items-center text-center">
+            <div className="h-10 w-10 md:h-12 md:w-12 rounded-full bg-red-100 flex items-center justify-center mb-3 md:mb-4">
+              <ThumbsUp className="h-5 w-5 md:h-6 md:w-6 text-red-600" />
+            </div>
+            <h3 className="text-lg md:text-xl font-bold mb-2">Cercanía</h3>
+            <p className="text-gray-500 text-sm md:text-base">
+              Atención personalizada y adaptada a las necesidades de cada cliente.
+            </p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardContent className="p-4 md:p-6 flex flex-col items-center text-center">
+            <div className="h-10 w-10 md:h-12 md:w-12 rounded-full bg-red-100 flex items-center justify-center mb-3 md:mb-4">
+              <Award className="h-5 w-5 md:h-6 md:w-6 text-red-600" />
+            </div>
+            <h3 className="text-lg md:text-xl font-bold mb-2">Calidad</h3>
+            <p className="text-gray-500 text-sm md:text-base">
+              Solo ofrecemos vehículos que cumplen nuestros estándares exigentes.
             </p>
           </CardContent>
         </Card>
@@ -97,19 +110,17 @@ export default function AboutPage() {
             </div>
             <h3 className="text-lg md:text-xl font-bold mb-2">Compromiso</h3>
             <p className="text-gray-500 text-sm md:text-base">
-              Nos comprometemos a ofrecer el mejor servicio y las mejores condiciones a nuestros clientes.
+              Acompañamos al cliente antes, durante y después de la compra.
             </p>
           </CardContent>
         </Card>
         <Card>
           <CardContent className="p-4 md:p-6 flex flex-col items-center text-center">
             <div className="h-10 w-10 md:h-12 md:w-12 rounded-full bg-red-100 flex items-center justify-center mb-3 md:mb-4">
-              <ThumbsUp className="h-5 w-5 md:h-6 md:w-6 text-red-600" />
+              <Heart className="h-5 w-5 md:h-6 md:w-6 text-red-600" />
             </div>
-            <h3 className="text-lg md:text-xl font-bold mb-2">Satisfacción</h3>
-            <p className="text-gray-500 text-sm md:text-base">
-              Trabajamos para que cada cliente quede plenamente satisfecho con su compra y servicio.
-            </p>
+            <h3 className="text-lg md:text-xl font-bold mb-2">Pasión</h3>
+            <p className="text-gray-500 text-sm md:text-base">Porque nos encantan los coches tanto como a ti.</p>
           </CardContent>
         </Card>
       </div>
