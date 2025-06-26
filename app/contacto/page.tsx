@@ -54,18 +54,18 @@ export default function ContactPage() {
               <div className="flex h-10 w-10 md:h-12 md:w-12 shrink-0 items-center justify-center rounded-full bg-red-600 text-white">
                 <Mail className="h-5 w-5 md:h-6 md:w-6" />
               </div>
-              <div className="flex-1 min-w-0">
+              <div className="w-full">
                 <h3 className="text-lg md:text-xl font-bold">Email</h3>
                 <p className="text-gray-500 mb-2 text-sm md:text-base">
                   Escríbenos y te responderemos lo antes posible
                 </p>
                 <a
-                  href="https://mail.google.com/mail/?view=cm&fs=1&to=andresvazquezdelrio@gmail.com&su=Contacto%20desde%20APR%20Cars"
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=pablo.sanchez@iesdecurtis.gal&su=Contacto%20desde%20APR%20Cars"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm md:text-base font-medium hover:text-red-600 transition-colors flex items-center break-words"
+                  className="text-sm md:text-base lg:text-lg font-medium hover:text-red-600 transition-colors flex items-center break-all"
                 >
-                  <span className="break-all">andresvazquezdelrio@gmail.com</span>
+                  <span className="truncate">pablo.sanchez@iesdecurtis.gal</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"
