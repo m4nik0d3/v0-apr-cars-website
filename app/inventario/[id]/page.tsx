@@ -6,8 +6,8 @@ import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
-import { CarGalleryQ2 } from "@/components/car-gallery-q2"
-import { CarGalleryA3 } from "@/components/car-gallery-a3"
+import { CarGallery } from "@/components/car-gallery"
+import { SimilarCars } from "@/components/similar-cars"
 
 interface CarPageProps {
   params: {
@@ -15,10 +15,20 @@ interface CarPageProps {
   }
 }
 
-// Base de datos de coches
-const carsDatabase = {
-  "1": {
-    id: "1",
+export function generateMetadata({ params }: CarPageProps): Metadata {
+  // En un caso real, obtendríamos los datos del coche desde una API o base de datos
+  return {
+    title: `Audi Q2 Black Line | APR Cars`,
+    description: `Audi Q2 Black Line 2021 con 167.000 km. Vehículo en excelente estado con todas las garantías.`,
+  }
+}
+
+export default function CarPage({ params }: CarPageProps) {
+  const carId = params.id
+
+  // En un caso real, obtendríamos los datos del coche desde una API o base de datos
+  const car = {
+    id: carId,
     brand: "Audi",
     model: "Q2 Black Line",
     version: "35 TFSI S Tronic",
@@ -51,117 +61,20 @@ const carsDatabase = {
       "Sistema de sonido premium",
       "Arranque sin llave",
     ],
-    technical: {
-      motor: "1.5 TFSI",
-      torque: "250 Nm",
-      acceleration: "8.5 segundos",
-      maxSpeed: "205 km/h",
-      consumption: "6.2 l/100km",
-      emissions: "141 g/km",
-      classification: "Euro 6d",
-      weight: "1.395 kg",
-      dimensions: "4.191 / 1.794 / 1.508 mm",
-      trunkCapacity: "405 litros",
-      tankCapacity: "50 litros",
-    },
     externalLink: "https://wallapop.com/item/audi-q2-black-line-1134118822?utm_medium=AppShare&utm_source=ShareItem",
-    galleryComponent: "q2",
-  },
-  "2": {
-    id: "2",
-    brand: "Audi",
-    model: "A3 Sportback",
-    version: "2.0 TDI",
-    year: 2017,
-    price: 15500,
-    km: 172000,
-    fuel: "Diésel",
-    transmission: "Manual",
-    power: 150,
-    doors: 5,
-    seats: 5,
-    color: "Plata",
-    warranty: "1 año",
-    description:
-      "Se vende Audi A3 Sportback 2.0 TDI del año 2017, nacional. El vehículo se encuentra en excelente estado de conservación. Mantenimientos al día y con todas las revisiones realizadas en servicios oficiales.",
-    features: [
-      "Faros LED",
-      "Climatizador automático",
-      "Volante multifunción",
-      "Sistema de navegación",
-      "Bluetooth",
-      "Sensores de aparcamiento traseros",
-      "Control de crucero",
-      "Asientos deportivos",
-      "Llantas de aleación",
-      "Elevalunas eléctricos",
-      "Cierre centralizado",
-      "Sistema Start/Stop",
-      "Ordenador de a bordo",
-      "Radio CD/MP3",
-    ],
-    technical: {
-      motor: "2.0 TDI",
-      torque: "320 Nm",
-      acceleration: "8.2 segundos",
-      maxSpeed: "210 km/h",
-      consumption: "4.8 l/100km",
-      emissions: "126 g/km",
-      classification: "Euro 6",
-      weight: "1.320 kg",
-      dimensions: "4.343 / 1.777 / 1.425 mm",
-      trunkCapacity: "380 litros",
-      tankCapacity: "50 litros",
-    },
-    externalLink:
-      "https://wallapop.com/item/audi-a3-sportback-2-0-tdi-1117233223?utm_medium=AppShare&utm_source=ShareItem",
-    galleryComponent: "a3",
-  },
-}
-
-export function generateMetadata({ params }: CarPageProps): Metadata {
-  const car = carsDatabase[params.id as keyof typeof carsDatabase]
-
-  if (!car) {
-    return {
-      title: "Vehículo no encontrado | APR Cars",
-      description: "El vehículo solicitado no se encuentra disponible.",
-    }
   }
-
-  return {
-    title: `${car.brand} ${car.model} | APR Cars`,
-    description: `${car.brand} ${car.model} ${car.year} con ${car.km.toLocaleString("es-ES")} km. Vehículo en excelente estado con todas las garantías.`,
-  }
-}
-
-export default function CarPage({ params }: CarPageProps) {
-  const car = carsDatabase[params.id as keyof typeof carsDatabase]
-
-  if (!car) {
-    return (
-      <div className="container px-4 md:px-6 py-8 md:py-12">
-        <div className="text-center">
-          <h1 className="text-3xl font-bold mb-4">Vehículo no encontrado</h1>
-          <p className="text-gray-500 mb-6">El vehículo que buscas no está disponible.</p>
-          <Link href="/" passHref>
-            <Button className="bg-red-600 hover:bg-red-700">Volver al Inicio</Button>
-          </Link>
-        </div>
-      </div>
-    )
-  }
-
-  const GalleryComponent = car.galleryComponent === "q2" ? CarGalleryQ2 : CarGalleryA3
 
   return (
     <div className="container px-4 md:px-6 py-8 md:py-12">
       <div className="flex flex-col space-y-8">
         <div className="flex flex-col md:flex-row justify-between items-start gap-4">
           <div>
-            <Link href="/" className="inline-flex items-center text-sm text-gray-500 hover:text-gray-900 mb-2">
+            <Link
+              href="/inventario"
+              className="inline-flex items-center text-sm text-gray-500 hover:text-gray-900 mb-2"
+            >
               <ChevronLeft className="mr-1 h-4 w-4" />
-              Volver al Inicio
+              Volver al inventario
             </Link>
             <h1 className="text-3xl font-bold">
               {car.brand} {car.model} {car.version}
@@ -195,7 +108,7 @@ export default function CarPage({ params }: CarPageProps) {
           </div>
         </div>
 
-        <GalleryComponent />
+        <CarGallery />
 
         <div className="grid md:grid-cols-3 gap-8">
           <div className="md:col-span-2">
@@ -281,7 +194,7 @@ export default function CarPage({ params }: CarPageProps) {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                       <h3 className="font-medium text-gray-500">Motor</h3>
-                      <p>{car.technical.motor}</p>
+                      <p>1.5 TFSI</p>
                     </div>
                     <div>
                       <h3 className="font-medium text-gray-500">Potencia</h3>
@@ -289,43 +202,43 @@ export default function CarPage({ params }: CarPageProps) {
                     </div>
                     <div>
                       <h3 className="font-medium text-gray-500">Par motor</h3>
-                      <p>{car.technical.torque}</p>
+                      <p>250 Nm</p>
                     </div>
                     <div>
                       <h3 className="font-medium text-gray-500">Aceleración 0-100 km/h</h3>
-                      <p>{car.technical.acceleration}</p>
+                      <p>8.5 segundos</p>
                     </div>
                     <div>
                       <h3 className="font-medium text-gray-500">Velocidad máxima</h3>
-                      <p>{car.technical.maxSpeed}</p>
+                      <p>205 km/h</p>
                     </div>
                     <div>
                       <h3 className="font-medium text-gray-500">Consumo combinado</h3>
-                      <p>{car.technical.consumption}</p>
+                      <p>6.2 l/100km</p>
                     </div>
                     <div>
                       <h3 className="font-medium text-gray-500">Emisiones CO2</h3>
-                      <p>{car.technical.emissions}</p>
+                      <p>141 g/km</p>
                     </div>
                     <div>
                       <h3 className="font-medium text-gray-500">Clasificación medioambiental</h3>
-                      <p>{car.technical.classification}</p>
+                      <p>Euro 6d</p>
                     </div>
                     <div>
                       <h3 className="font-medium text-gray-500">Peso</h3>
-                      <p>{car.technical.weight}</p>
+                      <p>1.395 kg</p>
                     </div>
                     <div>
                       <h3 className="font-medium text-gray-500">Dimensiones (L/A/A)</h3>
-                      <p>{car.technical.dimensions}</p>
+                      <p>4.191 / 1.794 / 1.508 mm</p>
                     </div>
                     <div>
                       <h3 className="font-medium text-gray-500">Capacidad maletero</h3>
-                      <p>{car.technical.trunkCapacity}</p>
+                      <p>405 litros</p>
                     </div>
                     <div>
                       <h3 className="font-medium text-gray-500">Capacidad depósito</h3>
-                      <p>{car.technical.tankCapacity}</p>
+                      <p>50 litros</p>
                     </div>
                   </div>
                 </div>
@@ -342,7 +255,7 @@ export default function CarPage({ params }: CarPageProps) {
                 </div>
                 <div className="flex items-center gap-2">
                   <Mail className="h-5 w-5 text-red-600" />
-                  <span>andresvazquezdelrio@gmail.com</span>
+                  <span>pablo.sanchez@iesdecurtis.gal</span>
                 </div>
                 <Link href="/contacto" passHref>
                   <Button className="w-full bg-red-600 hover:bg-red-700">Formulario de contacto</Button>
@@ -364,6 +277,11 @@ export default function CarPage({ params }: CarPageProps) {
               </div>
             </div>
           </div>
+        </div>
+
+        <div className="mt-8">
+          <h2 className="text-2xl font-bold mb-6">Vehículos similares</h2>
+          <SimilarCars />
         </div>
       </div>
     </div>

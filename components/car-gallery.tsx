@@ -8,44 +8,44 @@ import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog"
 
 const carImages = [
   {
-    src: "/cars/audi-q2-main.webp",
-    alt: "Audi Q2 Black Line - Vista frontal lateral principal",
-  },
-  {
-    src: "/cars/audi-q2-1.webp",
+    src: "/cars/audi-q2-front.png",
     alt: "Audi Q2 Black Line - Vista frontal",
   },
   {
-    src: "/cars/audi-q2-5.webp",
-    alt: "Audi Q2 Black Line - Vista lateral completa",
+    src: "/cars/audi-q2-front-side.png",
+    alt: "Audi Q2 Black Line - Vista frontal lateral",
   },
   {
-    src: "/cars/audi-q2-3.webp",
+    src: "/cars/audi-q2-rear.png",
     alt: "Audi Q2 Black Line - Vista trasera",
   },
   {
-    src: "/cars/audi-q2-4.webp",
+    src: "/cars/audi-q2-rear-side.png",
     alt: "Audi Q2 Black Line - Vista trasera lateral",
   },
   {
-    src: "/cars/audi-q2-interior.webp",
-    alt: "Audi Q2 Black Line - Interior y salpicadero",
+    src: "/cars/audi-q2-side.png",
+    alt: "Audi Q2 Black Line - Vista lateral",
   },
   {
-    src: "/cars/audi-q2-dashboard.webp",
+    src: "/cars/audi-q2-interior.png",
+    alt: "Audi Q2 Black Line - Interior",
+  },
+  {
+    src: "/cars/audi-q2-dashboard.png",
     alt: "Audi Q2 Black Line - Virtual Cockpit",
   },
   {
-    src: "/cars/audi-q2-navigation.webp",
-    alt: "Audi Q2 Black Line - Navegador GPS",
+    src: "/cars/audi-q2-navigation.png",
+    alt: "Audi Q2 Black Line - Navegador",
   },
   {
-    src: "/cars/audi-q2-camera.webp",
-    alt: "Audi Q2 Black Line - Cámara trasera y sensores",
+    src: "/cars/audi-q2-camera.png",
+    alt: "Audi Q2 Black Line - Cámara trasera",
   },
   {
-    src: "/cars/audi-q2-seats.webp",
-    alt: "Audi Q2 Black Line - Asientos delanteros",
+    src: "/cars/audi-q2-seats.png",
+    alt: "Audi Q2 Black Line - Asientos deportivos",
   },
 ]
 

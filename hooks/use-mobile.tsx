@@ -22,3 +22,6 @@ export function useMobile(breakpoint = 768) {
 
   return isMobile
 }
+
+/* 👇 New export alias ─────────────────────────────────────────── */
+export const useIsMobile = useMobile

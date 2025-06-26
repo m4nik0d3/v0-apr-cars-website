@@ -47,15 +47,14 @@ const cars = [
   {
     id: 3,
     brand: "Audi",
-    model: "A3 Sportback",
-    year: 2017,
-    price: 15500,
-    image: "/cars/audi-a3-main.webp",
-    km: 172000,
-    fuel: "Diésel",
-    transmission: "Manual",
-    externalLink:
-      "https://wallapop.com/item/audi-a3-sportback-2-0-tdi-1117233223?utm_medium=AppShare&utm_source=ShareItem",
+    model: "A4",
+    year: 2023,
+    price: 44200,
+    image: "/cars/audi-a4-new.jpg",
+    km: 18000,
+    fuel: "Híbrido",
+    transmission: "Automático",
+    externalLink: "https://www.coches.net/audi-a4",
   },
   {
     id: 4,
